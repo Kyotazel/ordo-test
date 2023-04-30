@@ -7,7 +7,7 @@ Mini Ecomerce, Laravel 10
 	- Seller/User 	: name, email, password, level
 	- carts			: user_id
 	- cart_detail	: cart_id, product_id, quantity
-	- orders		: user_id
+	- orders		: user_id, total_price, payment_status, snap_token
 	- order_detail	: order_id, product_id, quantity
 
 ## WEB
