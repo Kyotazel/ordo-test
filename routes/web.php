@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +25,13 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function() {
-    Route::get('/', function () {
-        return view('welcome');
-    })->middleware('auth');
-    Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+    Route::get('/', [DashboardController::class, 'index']);
+
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    
+    Route::get('/category', [CategoryController::class, 'index']);
+    Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
+    Route::post('/category/edit', [CategoryController::class, 'edit'])->name('category.edit');
+    Route::post('/category/destroy', [CategoryController::class, 'destroy'])->name('category.destroy');
 });
 

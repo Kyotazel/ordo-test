@@ -12,15 +12,13 @@ Mini Ecomerce, Laravel 10
 
 ## WEB
 	- Admin
-		- Register
+		- Register (Done)
 			- Email
 			- Password
 			- Password Confirmation
-		- Login
+		- Login (Done)
 			- Email
 			- Password
-		- List Product DT
-			- View Datatables
 		- List CRUD Category DT
 			- Create (Modal)
 				- name
@@ -30,6 +28,8 @@ Mini Ecomerce, Laravel 10
 				- image (dont upload if not changed)
 			- Delete (Sweetalert)
 			- View (Datatables)
+		- List Product DT
+			- View Datatables
 		- List Seller DT
 			- View (Datatables) (Level Seller)
 		- List User DT
