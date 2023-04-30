@@ -12,14 +12,14 @@ Mini Ecomerce, Laravel 10
 
 ## WEB
 	- Admin
-		- Register (Done)
+		- Register						(Done)
 			- Email
 			- Password
 			- Password Confirmation
-		- Login (Done)
+		- Login 						(Done)
 			- Email
 			- Password
-		- List CRUD Category DT
+		- List CRUD Category DT			(Done)
 			- Create (Modal)
 				- name
 				- image
