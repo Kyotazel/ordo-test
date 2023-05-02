@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SellerController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,5 +35,8 @@ Route::middleware('auth')->group(function() {
     Route::post('/category/store', [CategoryController::class, 'store'])->name('category.store');
     Route::post('/category/edit', [CategoryController::class, 'edit'])->name('category.edit');
     Route::post('/category/destroy', [CategoryController::class, 'destroy'])->name('category.destroy');
+
+    Route::get('/user', [UserController::class, 'index']);
+    Route::get('/seller', [SellerController::class, 'index']);
 });
 

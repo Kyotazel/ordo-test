@@ -30,9 +30,9 @@ Mini Ecomerce, Laravel 10
 			- View (Datatables)
 		- List Product DT
 			- View Datatables
-		- List Seller DT
+		- List Seller DT				(Done)
 			- View (Datatables) (Level Seller)
-		- List User DT
+		- List User DT					(Done)
 			- View (Datatables) (Level User)
 		
 Mobile / API (Sanctum)
