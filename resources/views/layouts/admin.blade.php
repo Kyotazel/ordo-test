@@ -144,22 +144,22 @@
                         </li>
                         <li class="menu-title"><i class="ri-more-fill"></i> <span>Master Data</span></li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link @if (request()->is('category')) active @endif" href="/category">
+                            <a class="nav-link menu-link @if (request()->is('categories')) active @endif" href="/categories">
                                 <i class="mdi mdi-backburger"></i> <span>Ketegori</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link @if (request()->is('product')) active @endif" href="/product">
+                            <a class="nav-link menu-link @if (request()->is('products')) active @endif" href="/products">
                                 <i class="las la-box"></i> <span>Produk</span>
                             </a> 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link @if (request()->is('seller')) active @endif" href="/seller">
+                            <a class="nav-link menu-link @if (request()->is('sellers')) active @endif" href="/sellers">
                                 <i class="las la-store-alt"></i> <span>Seller</span>
                             </a> 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link @if (request()->is('user')) active @endif" href="/user">
+                            <a class="nav-link menu-link @if (request()->is('users')) active @endif" href="/users">
                                 <i class="mdi mdi-account"></i> <span>User</span>
                             </a> 
                         </li>

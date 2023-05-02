@@ -28,7 +28,7 @@ Mini Ecomerce, Laravel 10
 				- image (dont upload if not changed)
 			- Delete (Sweetalert)
 			- View (Datatables)
-		- List Product DT
+		- List Product DT				(Done)
 			- View Datatables
 		- List Seller DT				(Done)
 			- View (Datatables) (Level Seller)
@@ -47,24 +47,26 @@ Mobile / API (Sanctum)
 			- email
 			- password
 		- CRUD Produk
-			- Create
+			- Create					(Done)
 				- name
 				- image
 				- price
 				- description
 				- category_id
 				- seller_id
-			- Update
+			- Update					(Done)
 				- name
 				- image
 				- price
 				- description
 				- category_id
-			- Delete
+			- Delete					(Done)
 				- product_id
 			- View
-				- All product
-				- Detailed product
+				- All product			(Done)
+				- Detailed product		(Done)
+			- Change Product quantity	(Done)
+				- product_id			
 		- Get Orders
 			- all orders
 			- detailed order

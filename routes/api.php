@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\seller\AuthController as SellerAuthController;
+use App\Http\Controllers\seller\ProductController as SellerProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,8 +20,16 @@ Route::prefix('/seller')->group(function() {
     Route::post('/register', [SellerAuthController::class, 'register']);
     Route::post('/login', [SellerAuthController::class, 'login']);
     
-    Route::middleware('auth:sanctum')->group(function() {
+    Route::middleware(['auth:sanctum', 'seller'])->group(function() {
         Route::get('/logout', [SellerAuthController::class, 'logout']);
+
+        Route::get('/products', [SellerProductController::class, 'index']);
+        Route::get('/product/{id}', [SellerProductController::class, 'show']);
+        Route::post('/product/store', [SellerProductController::class, 'store']);
+        Route::put('/product/{id}', [SellerProductController::class, 'update']);
+        Route::delete('/product/{id}', [SellerProductController::class, 'destroy']);
+        Route::patch('/product/quantity/{id}', [SellerProductController::class, 'update_quantity']);
+
     });
 });
 
