@@ -38,12 +38,12 @@ Mini Ecomerce, Laravel 10
 Mobile / API (Sanctum)
 ## API
 	- Seller
-		- Register
+		- Register						(Done)
 			- name
 			- email
 			- password
 			- level (in backend (seller))
-		- Login
+		- Login							(Done)
 			- email
 			- password
 		- CRUD Produk
