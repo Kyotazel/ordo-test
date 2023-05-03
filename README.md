@@ -72,12 +72,12 @@ Mobile / API (Sanctum)
 			- detailed order
 		
 	- User
-		- Register
+		- Register						(Done)
 			- name
 			- email
 			- password
 			- level (in backend (user))
-		- Login
+		- Login							(Done)
 			- email
 			- password
 		- Get Products

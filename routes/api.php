@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\seller\AuthController as SellerAuthController;
 use App\Http\Controllers\seller\ProductController as SellerProductController;
+use App\Http\Controllers\user\AuthController as UserAuthController;
+use App\Http\Controllers\user\ProductController as UserProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +32,18 @@ Route::prefix('/seller')->group(function() {
         Route::delete('/product/{id}', [SellerProductController::class, 'destroy']);
         Route::patch('/product/quantity/{id}', [SellerProductController::class, 'update_quantity']);
 
+    });
+});
+
+Route::prefix('/user')->group(function() {
+    Route::post('/register', [UserAuthController::class, 'register']);
+    Route::post('/login', [UserAuthController::class, 'login']);
+
+    Route::middleware(['auth:sanctum', 'user'])->group(function() {
+        Route::get('/logout', [SellerAuthController::class, 'logout']);
+
+        Route::get('/products', [UserProductController::class, 'index']);
+        Route::get('/product/{id}', [UserProductController::class, 'show']);
     });
 });
 
