@@ -80,10 +80,10 @@ Mobile / API (Sanctum)
 		- Login							(Done)
 			- email
 			- password
-		- Get Products
+		- Get Products					(Done)
 			- all products
 			- detailed product
-		- CRUD Cart
+		- CRUD Cart						(Done)
 			- add product to cart
 			- edit cart
 			- delete cart

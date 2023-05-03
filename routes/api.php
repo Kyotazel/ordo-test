@@ -4,6 +4,7 @@ use App\Http\Controllers\seller\AuthController as SellerAuthController;
 use App\Http\Controllers\seller\ProductController as SellerProductController;
 use App\Http\Controllers\user\AuthController as UserAuthController;
 use App\Http\Controllers\user\ProductController as UserProductController;
+use App\Http\Controllers\user\CartController as UserCartController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -44,6 +45,12 @@ Route::prefix('/user')->group(function() {
 
         Route::get('/products', [UserProductController::class, 'index']);
         Route::get('/product/{id}', [UserProductController::class, 'show']);
+
+        Route::get('/carts', [UserCartController::class, 'index']);
+        Route::post('/cart/detail', [UserCartController::class, 'show']);
+        Route::post('/cart/add', [UserCartController::class, 'store']);
+        Route::patch('/cart', [UserCartController::class, 'update']);
+        Route::delete('/cart', [UserCartController::class, 'destroy']);
     });
 });
 
