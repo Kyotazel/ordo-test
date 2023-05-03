@@ -87,7 +87,6 @@ Mobile / API (Sanctum)
 			- add product to cart
 			- edit cart
 			- delete cart
-		- Checkout Order
+		- Checkout Order				(Done)
 			- add to order_table
-		- Payment Gateway Midtrans
-			- 
+		- Payment Gateway Midtrans		(Done)

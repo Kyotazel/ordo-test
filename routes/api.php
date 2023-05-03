@@ -5,6 +5,7 @@ use App\Http\Controllers\seller\ProductController as SellerProductController;
 use App\Http\Controllers\user\AuthController as UserAuthController;
 use App\Http\Controllers\user\ProductController as UserProductController;
 use App\Http\Controllers\user\CartController as UserCartController;
+use App\Http\Controllers\user\OrderController as UserOrderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -51,6 +52,9 @@ Route::prefix('/user')->group(function() {
         Route::post('/cart/add', [UserCartController::class, 'store']);
         Route::patch('/cart', [UserCartController::class, 'update']);
         Route::delete('/cart', [UserCartController::class, 'destroy']);
+
+        Route::get('/order/checkout', [UserOrderController::class, 'order']);
+        Route::get('/order/confirm_payment', [UserOrderController::class, 'confirm_payment']);
     });
 });
 
