@@ -50,3 +50,35 @@ php artisan storage:link
 ```bash
 php artisan serve
 ```
+
+
+
+## Admin Website
+1. Masuk ke url pada browser
+2. Register dengan email dan password
+3. Login menggunakan akun yang sudah register
+
+### Kategori
+1. Create Kategori
+    - Masukkan Nama kategori dan gambar dan tekan submit
+2. Update Kategori
+    - Ubah yang diperlukan dan tekan submit
+3. Delete Kategori
+    - Tekan tombol delete untuk menghapus kategori
+
+### Produk
+1. Data Produk yang ditambahkan oleh Seller
+
+### Seller
+1. Data Seller yang terdaftar
+
+### User
+1. Data User yang terdaftar
+
+
+## API
+
+Jalankan Collection Postman dari link dibawah dan run in postman
+[Collection Postman](https://documenter.getpostman.com/view/23467537/2s93eVXtXj#3168c730-82c4-4d89-ba0b-713ff8e9d397)
+
+Link tersebut juga merupakan dokumentasi postman
