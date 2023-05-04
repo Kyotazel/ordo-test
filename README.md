@@ -68,8 +68,7 @@ Mobile / API (Sanctum)
 			- Change Product quantity	(Done)
 				- product_id			
 		- Get Orders
-			- all orders
-			- detailed order
+			- all orders				(Done)
 		
 	- User
 		- Register						(Done)

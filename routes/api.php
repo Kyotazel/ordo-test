@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\seller\AuthController as SellerAuthController;
 use App\Http\Controllers\seller\ProductController as SellerProductController;
+use App\Http\Controllers\seller\OrderController as SellerOrderController;
 use App\Http\Controllers\user\AuthController as UserAuthController;
 use App\Http\Controllers\user\ProductController as UserProductController;
 use App\Http\Controllers\user\CartController as UserCartController;
@@ -33,6 +34,9 @@ Route::prefix('/seller')->group(function() {
         Route::put('/product/{id}', [SellerProductController::class, 'update']);
         Route::delete('/product/{id}', [SellerProductController::class, 'destroy']);
         Route::patch('/product/quantity/{id}', [SellerProductController::class, 'update_quantity']);
+
+        Route::get('/order/resume', [SellerOrderController::class, 'resume']);
+        Route::get('/order/detail/{id}', [SellerOrderController::class, 'resume']);
 
     });
 });
