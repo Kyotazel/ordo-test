@@ -1,91 +1,52 @@
-Detail Catatan
-Mini Ecomerce, Laravel 10
-- Table
-	- Category 		: name, image
-	- Products 		: name, images, price, description, category_id, seller_id, quantity
-	- admins 		: email, password
-	- Seller/User 	: name, email, password, level
-	- carts			: user_id
-	- cart_detail	: cart_id, product_id, quantity
-	- orders		: user_id, total_price, payment_status, snap_token
-	- order_detail	: order_id, product_id, quantity
+# Mini E-Commerce Laravel 10
 
-## WEB
-	- Admin
-		- Register						(Done)
-			- Email
-			- Password
-			- Password Confirmation
-		- Login 						(Done)
-			- Email
-			- Password
-		- List CRUD Category DT			(Done)
-			- Create (Modal)
-				- name
-				- image
-			- Edit (Modal)
-				- name
-				- image (dont upload if not changed)
-			- Delete (Sweetalert)
-			- View (Datatables)
-		- List Product DT				(Done)
-			- View Datatables
-		- List Seller DT				(Done)
-			- View (Datatables) (Level Seller)
-		- List User DT					(Done)
-			- View (Datatables) (Level User)
-		
-Mobile / API (Sanctum)
-## API
-	- Seller
-		- Register						(Done)
-			- name
-			- email
-			- password
-			- level (in backend (seller))
-		- Login							(Done)
-			- email
-			- password
-		- CRUD Produk
-			- Create					(Done)
-				- name
-				- image
-				- price
-				- description
-				- category_id
-				- seller_id
-			- Update					(Done)
-				- name
-				- image
-				- price
-				- description
-				- category_id
-			- Delete					(Done)
-				- product_id
-			- View
-				- All product			(Done)
-				- Detailed product		(Done)
-			- Change Product quantity	(Done)
-				- product_id			
-		- Get Orders
-			- all orders				(Done)
-		
-	- User
-		- Register						(Done)
-			- name
-			- email
-			- password
-			- level (in backend (user))
-		- Login							(Done)
-			- email
-			- password
-		- Get Products					(Done)
-			- all products
-			- detailed product
-		- CRUD Cart						(Done)
-			- add product to cart
-			- edit cart
-			- delete cart
-		- Checkout Order				(Done)
-			- add to order_table
-		- Payment Gateway Midtrans		(Done)
+## Instalasi
+
+1. Clone project dari github dengan git clone
+
+```bash
+git clone https://github.com/Kyotazel/ordo-test.git
+```
+
+2. Copy .env.example ke .env dan ubah serta tambahkan berikut
+
+```bash
+DB_CONNECTION=mysql
+DB_HOST=database_host
+DB_PORT=database_port
+DB_DATABASE=database_name
+DB_USERNAME=database_username
+DB_PASSWORD=database_password
+
+FILESYSTEM_DISK=public
+
+MIDTRANS_IS_PRODUCTION=false
+MIDTRANS_MERCHANT_ID=merchant-id
+MIDTRANS_CLIENT_KEY=SB-Mid-client-key
+MIDTRANS_SERVER_KEY=SB-Mid-server-key
+
+```
+
+3. Install dengan composer
+
+```bash
+composer install
+```
+
+4. Migrasi Database
+
+```bash
+php artisan migrate
+```
+
+5. Sambungkan link storage ke publik
+
+```bash
+php artisan storage:link
+```
+
+6. Jalankan project laravel dan buka di browser
+
+```bash
+php artisan serve
+```
